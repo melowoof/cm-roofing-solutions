@@ -154,7 +154,7 @@ function SecondSection() {
   // ];
 
   return (
-    <section ref={targetRef} className=" relative h-[200vh]">
+    <section ref={targetRef} className="relative h-[200vh]">
       {/* <div className="h-full w-full lg:px-20 pb-14 pt-6 flex items-center">
         <div
           // style={{ opacity: opacity[2], filter: blur[2] }}
@@ -173,7 +173,7 @@ function SecondSection() {
         </div>
       </div> */}
 
-      <div className="flex lg:flex-row  top-0 h-screen flex-col">
+      <div className="flex lg:flex-row top-0 h-screen flex-col sticky bg-black">
         {/* Left side */}
         <div className="w-1/2 pt-14 pl-14 pr-8 flex flex-col items-center">
           <h1

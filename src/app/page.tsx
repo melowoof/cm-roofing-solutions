@@ -197,7 +197,7 @@ function SecondSection() {
 
 function ServicesSection() {
   return null;
-  
+
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
   const x = useTransform(scrollYProgress, [0.15, 0.85], ["0%", "-70%"]);
@@ -432,7 +432,9 @@ function AboutUsDetails() {
         <Image
           className="h-full w-full object-cover blur-sm p-16"
           src={"/images/about-us/cf-shingle_barkwood_05_1.FUMVAQ-scaled.webp"}
-          fill
+          // fill
+          width={2560}
+          height={1920}
           alt=""
         ></Image>
       </div>

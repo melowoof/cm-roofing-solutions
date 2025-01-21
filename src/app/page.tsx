@@ -32,6 +32,69 @@ export default function Home() {
   );
 
   return (
+    <div className="relative w-screen h-[200vh]">
+      <div
+        className="flex lg:flex-row top-0 h-screen flex-col sticky"
+        // style={{ position: "-webkit-sticky" }}
+      >
+        <div className="w-1/2 pt-14 pl-14 pr-8 flex flex-col items-center">
+          <h1
+            // style={{ opacity: opacity[0], filter: blur[0] }}
+            // transition={{ delay: 0.25, duration: 0.8 }}
+            className={`${inter.className}  lg:text-8xl md:text-5xl text-4xl`}
+          >
+            ROOFING DONE
+          </h1>
+          {/* 1st image */}
+          <div className="h-full w-full lg:px-20 pb-14 pt-6 flex items-center">
+            <div
+              // style={{ opacity: opacity[2], filter: blur[2] }}
+              // transition={{ delay: 0.25 * 5, duration: 0.8 }}
+              className="h-full"
+            >
+              <Image
+                className="h-full object-cover"
+                src={"/images/cf-shingle_barkwood.webp"}
+                width={2560}
+                height={1920}
+                // fill
+                alt="Barkwood shingle"
+              ></Image>
+              <p className="font-serif text-xl mt-1">Barkwood shingle</p>
+            </div>
+          </div>
+        </div>
+        {/* Right side */}
+        <div className="w-1/2 flex flex-col items-center pt-14 pr-14 pl-8">
+          <div
+            // style={{ opacity: opacity[3], filter: blur[3] }}
+            // transition={{ delay: 0.25 * 5, duration: 0.8 }}
+            className="flex py-10 flex-col"
+          >
+            <Image
+              className="object-cover h-full"
+              src={"/images/bituminous-shingles.webp"}
+              width={2000}
+              height={1324}
+              alt="Bituminous shingles"
+            ></Image>
+            <p className="font-serif text-md mt-1">
+              Quality roofing, covered with bituminous shingles of brown color.
+            </p>
+          </div>
+          <h1
+            // style={{ opacity: opacity[1], filter: blur[1] }}
+            // transition={{ delay: 0.25 * 2, duration: 0.8 }}
+            className={`${inter.className} lg:text-8xl md:text-5xl text-4xl`}
+          >
+            THE RIGHT WAY
+          </h1>
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
     <>
       <section ref={targetRef} className="relative ">
         <div className="absolute z-10 w-screen h-full pointer-events-none">

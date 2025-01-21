@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div className=" w-screen h-[200vh]">
       <div className="top-0 sticky flex flex-row">
-        HIODAHDOAHWOIDHAWOHDOIAHWOIDHAOIWHDOIAHWODHAOWHDOIAHWDOIHAWOIDH
+        {/* HIODAHDOAHWOIDHAWOHDOIAHWOIDHAOIWHDOIAHWODHAOWHDOIAHWDOIHAWOIDH
         <Image
           className="h-full object-cover"
           src={"/images/cf-shingle_barkwood.webp"}
@@ -42,9 +42,10 @@ export default function Home() {
           height={500}
           // fill
           alt="Barkwood shingle"
-        ></Image>
-        {/* <div className="w-1/2 pt-14 pl-14 pr-8 flex flex-col items-center ">
-          <h1
+        ></Image> */}
+        <div className="w-1/2 pt-14 pl-14 pr-8 flex flex-col items-center ">
+          left side
+          {/* <h1
             className={`${inter.className}  lg:text-8xl md:text-5xl text-4xl`}
           >
             ROOFING DONE
@@ -61,10 +62,11 @@ export default function Home() {
               ></Image>
               <p className="font-serif text-xl mt-1">Barkwood shingle</p>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="w-1/2 flex flex-col items-center pt-14 pr-14 pl-8">
-          <div className="flex py-10 flex-col">
+          right side
+          {/* <div className="flex py-10 flex-col">
             <Image
               className="object-cover h-full"
               src={"/images/bituminous-shingles.webp"}
@@ -78,8 +80,8 @@ export default function Home() {
           </div>
           <h1 className={`${inter.className} lg:text-8xl md:text-5xl text-4xl`}>
             THE RIGHT WAY
-          </h1>
-        </div> */}
+          </h1> */}
+        </div>
       </div>
     </div>
   );

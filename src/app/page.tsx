@@ -49,7 +49,7 @@ export default function Home() {
         </div>
 
         <section id="home" className="block h-screen mb-40 ">
-          <Background imgSrc={"/images/beautiful-brown-metal-roof.jpg"}>
+          <Background imgSrc={"/images/beautiful-brown-metal-roof.webp"}>
             <motion.p
               initial={initialBlur}
               animate={visible}
@@ -146,7 +146,7 @@ function SecondSection() {
             ROOFING DONE
           </motion.h1>
           {/* 1st image */}
-          <div className="h-full lg:px-20 pb-14 pt-6 flex items-center">
+          <div className="h-full w-full lg:px-20 pb-14 pt-6 flex items-center">
             <motion.div
               style={{ opacity: opacity[2], filter: blur[2] }}
               transition={{ delay: 0.25 * 5, duration: 0.8 }}
@@ -154,9 +154,10 @@ function SecondSection() {
             >
               <Image
                 className="h-full object-cover"
-                src={"/images/cf-shingle_barkwood.jpg"}
+                src={"/images/cf-shingle_barkwood.webp"}
                 width={2560}
                 height={1920}
+                // fill
                 alt="Barkwood shingle"
               ></Image>
               <p className="font-serif text-xl mt-1">Barkwood shingle</p>
@@ -172,7 +173,7 @@ function SecondSection() {
           >
             <Image
               className="object-cover h-full"
-              src={"/images/bituminous-shingles.jpg"}
+              src={"/images/bituminous-shingles.webp"}
               width={2000}
               height={1324}
               alt="Bituminous shingles"
@@ -329,7 +330,7 @@ function AboutSection() {
               className="w-full "
             >
               <Image
-                src={"/images/about-us/landmark-shingles-CertainTeed.jpeg"}
+                src={"/images/about-us/landmark-shingles-CertainTeed.webp"}
                 width={1610}
                 height={1074}
                 alt=""
@@ -364,7 +365,7 @@ function AboutSection() {
               <Image
                 className="object-cover"
                 src={
-                  "/images/about-us/construction-worker-on-a-renovation-roof-the-house-installed-new-shingles.jpg"
+                  "/images/about-us/construction-worker-on-a-renovation-roof-the-house-installed-new-shingles.webp"
                 }
                 width={2000}
                 height={1125}
@@ -427,7 +428,7 @@ function AboutUsDetails() {
       <div className="h-full w-full -z-10 absolute">
         <Image
           className="h-full w-full object-cover blur-sm p-16"
-          src={"/images/about-us/cf-shingle_barkwood_05_1.FUMVAQ-scaled.jpg"}
+          src={"/images/about-us/cf-shingle_barkwood_05_1.FUMVAQ-scaled.webp"}
           fill
           alt=""
         ></Image>

@@ -36,8 +36,8 @@ export default function Home() {
       <div
         className="top-0 sticky h-screen"
         style={{
-          position: "sticky",
-          WebkitPerspectiveOrigin: "-webkit-sticky",
+          position: "-webkit-sticky",
+          // WebkitPerspectiveOrigin: "-webkit-sticky",
         }}
       >
         outside

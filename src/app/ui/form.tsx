@@ -1,6 +1,7 @@
 import SquareBlackButton from "./buttons";
 import { services } from "../services/services";
 import { inter } from "./fonts";
+import { ChevronDown } from "lucide-react";
 
 export default function FormPage() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -33,14 +34,21 @@ export default function FormPage() {
               placeholder="Email"
               required
             />
-            <select className="border-2 rounded-md p-3" name="Service" id="">
-              <option value="general-inquiry">General Inquiry</option>
-              {services.map((service) => (
-                <option key={service.id} value={service.id}>
-                  {service.title}
-                </option>
-              ))}
-            </select>
+            <div className="w-full relative">
+              <select
+                className="border-2 rounded-md px-3 h-12 appearance-none w-full bg-gray-100"
+                name="Service"
+                id=""
+              >
+                <option value="general-inquiry">General Inquiry</option>
+                {services.map((service) => (
+                  <option key={service.id} value={service.id}>
+                    {service.title}
+                  </option>
+                ))}
+              </select>
+              <ChevronDown className="absolute top-0 right-0 h-full mr-2 pointer-events-none" />
+            </div>
             <textarea
               className="border-2 rounded-md p-3 min-h-40"
               name="Message"

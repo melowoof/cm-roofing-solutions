@@ -80,10 +80,7 @@ export default function Home() {
                 className=" lg:w-1/2 w-3/4"
               >
                 <Logo color={"white"} />
-                <motion.div
-                  className="pointer-events-auto flex justify-center lg:mt-20 mt-10"
-                  style={{ opacity: logoOpacityRange }}
-                >
+                <motion.div className="pointer-events-auto flex justify-center lg:mt-20 mt-10">
                   <SquareBlackButton
                     text={"Get a Quote"}
                     onClick={() => scrollToId("form")}
@@ -246,13 +243,13 @@ function ServicesSection() {
 
 function Card({ service }: { service: ServiceType }) {
   return (
-    <div className="flex w-[50vw] h-[15vw]">
-      <Link href={service.url} className="h-full w-1/2">
+    <div className="flex w-[50vw] h-[15vw] ">
+      <Link href={service.url} className="h-full">
         <Image
-          className="h-full object-cover hover:-translate-y-1 transition-transform"
+          className="h-full object-cover hover:-translate-y-1 transition-transform w-fit"
           src={service.imgSrc}
           width={500}
-          height={200}
+          height={300}
           alt={service.title}
         ></Image>
       </Link>
@@ -502,7 +499,7 @@ function ReviewsSection() {
   return (
     <section className="w-screen lg:h-[100vh] h-[70vh] flex items-center">
       <div className="h-full w-full flex flex-col items-center lg:p-40 px-20 gap-5">
-        <div className="h-full w-full">
+        <div className="h-full w-full flex items-end">
           <Review
             key={reviews[reviewPage - 1].reviewAuthor}
             reviewText={reviews[reviewPage - 1].reviewText}

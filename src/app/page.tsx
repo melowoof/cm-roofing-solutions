@@ -34,57 +34,10 @@ export default function Home() {
   return (
     <div className=" w-screen h-[200vh]">
       <div
-        className="top-0 sticky  "
+        className="top-0 sticky"
         // style={{ position: "sticky" }}
-      >
-        {/* HIODAHDOAHWOIDHAWOHDOIAHWOIDHAOIWHDOIAHWODHAOWHDOIAHWDOIHAWOIDH
-        <Image
-          className="h-full object-cover"
-          src={"/images/cf-shingle_barkwood.webp"}
-          width={500}
-          height={500}
-          // fill
-          alt="Barkwood shingle"
-        ></Image> */}
-        <div className="">
-          left side
-          {/* <h1
-            className={`${inter.className}  lg:text-8xl md:text-5xl text-4xl`}
-          >
-            ROOFING DONE
-          </h1>
-          <div className="h-full w-full lg:px-20 pb-14 pt-6 flex items-center">
-            <div className="h-full">
-              <Image
-                className="h-full object-cover"
-                src={"/images/cf-shingle_barkwood.webp"}
-                width={2560}
-                height={1920}
-                // fill
-                alt="Barkwood shingle"
-              ></Image>
-              <p className="font-serif text-xl mt-1">Barkwood shingle</p>
-            </div>
-          </div> */}
-        </div>
-        {/* <div className="w-1/2 flex flex-col items-center pt-14 pr-14 pl-8">
-          right side */}
-        {/* <div className="flex py-10 flex-col">
-            <Image
-              className="object-cover h-full"
-              src={"/images/bituminous-shingles.webp"}
-              width={2000}
-              height={1324}
-              alt="Bituminous shingles"
-            ></Image>
-            <p className="font-serif text-md mt-1">
-              Quality roofing, covered with bituminous shingles of brown color.
-            </p>
-          </div>
-          <h1 className={`${inter.className} lg:text-8xl md:text-5xl text-4xl`}>
-            THE RIGHT WAY
-          </h1> */}
-        {/* </div> */}
+      >outside div
+        <div className="">inside div</div>
       </div>
     </div>
   );

@@ -100,7 +100,7 @@ export default function Home() {
         <SecondSection />
 
         {/* SERVICES SECTION */}
-        {/* <ServicesSection /> */}
+        <ServicesSection />
 
         {/* ABOUT SECTION */}
         <AboutSection />
@@ -196,6 +196,8 @@ function SecondSection() {
 }
 
 function ServicesSection() {
+  return null;
+  
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
   const x = useTransform(scrollYProgress, [0.15, 0.85], ["0%", "-70%"]);

@@ -32,15 +32,13 @@ export default function Home() {
   );
 
   return (
-    <div className="w-screen h-[100vh]">
+    <div className="w-screen h-[100vh] absolute" style={{position: "absolute"}}>
       <div
-        className="top-0 sticky bg-red-200"
-        // style={{
-        //   position: "-webkit-sticky",
-        //   // WebkitPerspectiveOrigin: "-webkit-sticky",
-        // }}
+        // className="top-0 sticky bg-red-200"
+        style={{ position: "sticky", top: 0 }}
       >
         outside
+        <div className="">inside normal div</div>
         <div className="w-screen h-screen static bg-green-200">
           <div>inside * 2</div>inside
         </div>

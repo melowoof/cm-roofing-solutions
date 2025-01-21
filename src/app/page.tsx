@@ -248,7 +248,8 @@ function Card({ service }: { service: ServiceType }) {
       <Link href={service.url} className="h-full">
         <Image
           className="h-full object-cover hover:-translate-y-1 transition-transform w-fit"
-          src={service.imgSrc}
+          // src={service.imgSrc}
+          src={"/images/services/asphalt-shingles.webp"}
           width={500}
           height={300}
           alt={service.title}

@@ -35,8 +35,12 @@ export default function Home() {
     <div className=" w-screen h-[200vh]">
       <div
         className="top-0 sticky h-screen"
-        // style={{ position: "sticky" }}
-      >outside
+        style={{
+          position: "sticky",
+          WebkitPerspectiveOrigin: "-webkit-sticky",
+        }}
+      >
+        outside
         <div className="">inside</div>
       </div>
     </div>

@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div className=" w-screen h-[200vh]">
       <div
-        className="top-0 sticky flex flex-row block"
+        className="top-0 sticky  "
         // style={{ position: "sticky" }}
       >
         {/* HIODAHDOAHWOIDHAWOHDOIAHWOIDHAOIWHDOIAHWODHAOWHDOIAHWDOIHAWOIDH

@@ -33,9 +33,17 @@ export default function Home() {
 
   return (
     <div className=" w-screen h-[200vh]">
-      <div className="top-0 sticky">
+      <div className="top-0 sticky flex flex-row">
         HIODAHDOAHWOIDHAWOHDOIAHWOIDHAOIWHDOIAHWODHAOWHDOIAHWDOIHAWOIDH
-        {/* <div className="w-1/2 pt-14 pl-14 pr-8 flex flex-col items-center">
+        <Image
+          className="h-full object-cover"
+          src={"/images/cf-shingle_barkwood.webp"}
+          width={500}
+          height={500}
+          // fill
+          alt="Barkwood shingle"
+        ></Image>
+        {/* <div className="w-1/2 pt-14 pl-14 pr-8 flex flex-col items-center ">
           <h1
             className={`${inter.className}  lg:text-8xl md:text-5xl text-4xl`}
           >

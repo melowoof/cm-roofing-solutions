@@ -34,10 +34,10 @@ export default function Home() {
   return (
     <div className=" w-screen h-[200vh]">
       <div
-        className="top-0 sticky"
+        className="top-0 sticky h-screen"
         // style={{ position: "sticky" }}
-      >outside div
-        <div className="">inside div</div>
+      >outside
+        <div className="">inside</div>
       </div>
     </div>
   );

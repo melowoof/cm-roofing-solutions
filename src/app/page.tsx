@@ -155,7 +155,7 @@ function SecondSection() {
 
   return (
     <section ref={targetRef} className=" relative h-[200vh]">
-      <div className="h-full w-full lg:px-20 pb-14 pt-6 flex items-center">
+      {/* <div className="h-full w-full lg:px-20 pb-14 pt-6 flex items-center">
         <div
           // style={{ opacity: opacity[2], filter: blur[2] }}
           // transition={{ delay: 0.25 * 5, duration: 0.8 }}
@@ -171,7 +171,7 @@ function SecondSection() {
           ></Image>
           <p className="font-serif text-xl mt-1">Barkwood shingle</p>
         </div>
-      </div>
+      </div> */}
 
       <div className="flex lg:flex-row  top-0 h-screen flex-col">
         {/* Left side */}

@@ -101,15 +101,15 @@ export default function Navbar() {
   );
 }
 
-type LinkType = {
-  href: string;
-  title: string;
-};
+// type LinkType = {
+//   href: string;
+//   title: string;
+// };
 
-const href: LinkType[] = [
-  { href: "/", title: "Home" },
-  { href: "/about-us", title: "About Us" },
-  { href: "/services", title: "Our Services" },
-  { href: "/projects", title: "Projects" },
-  { href: "/faq", title: "FAQ" },
-];
+// const href: LinkType[] = [
+//   { href: "/", title: "Home" },
+//   { href: "/about-us", title: "About Us" },
+//   { href: "/services", title: "Our Services" },
+//   { href: "/projects", title: "Projects" },
+//   { href: "/faq", title: "FAQ" },
+// ];

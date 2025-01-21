@@ -14,20 +14,19 @@ import { services, ServiceType } from "./services/services";
 import { scrollToId } from "./utils/util";
 
 export default function Home() {
-  const { scrollY } = useScroll();
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
 
-  const vhToPx = window.innerHeight;
   const buttonOpacityRange = useTransform(
     scrollYProgress,
     [0, 0.1, 0.95, 1],
     [0, 1, 1, 0]
   );
-  const logoOpacityRange = useTransform(scrollY, [0, vhToPx / 2], [1, 0]);
+  const logoOpacityRange = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
+
   const blur = useTransform(
-    scrollY,
-    [0, vhToPx - 200],
+    scrollYProgress,
+    [0, 0.05],
     ["blur(0px)", "blur(10px)"]
   );
 
@@ -49,7 +48,7 @@ export default function Home() {
           </div>
         </div>
 
-        <section id="home" className="block h-screen mb-40">
+        <section id="home" className="block h-screen mb-40 ">
           <Background imgSrc={"/images/beautiful-brown-metal-roof.jpg"}>
             <motion.p
               initial={initialBlur}

@@ -3,11 +3,23 @@ import { services } from "../services/services";
 import { inter } from "./fonts";
 
 export default function FormPage() {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+    console.log(data);
+  }
+
   return (
     <section className="w-screen h-[100vh]">
       <div className="h-full w-full flex justify-center items-center">
         <div className="w-2/4 flex flex-col gap-4">
-          <h1 className={`${inter.className} lg:text-6xl text-3xl flex justify-end`}>Get in touch</h1>
+          <h1
+            className={`${inter.className} lg:text-6xl text-3xl flex justify-end`}
+          >
+            Get in touch
+          </h1>
           <form action="" className="flex flex-col gap-5 font-serif">
             <input
               className="border-2 rounded-md p-3"
@@ -36,7 +48,7 @@ export default function FormPage() {
               placeholder="Message"
             ></textarea>
             <div className="flex justify-end">
-              <SquareBlackButton text={"Get a Quote"} />
+              <SquareBlackButton onClick={handleSubmit} text={"Get a Quote"} />
             </div>
           </form>
         </div>

@@ -290,10 +290,10 @@ function AboutSection() {
             className="w-1/2 h-full flex flex-col gap-4 justify-end"
           >
             <motion.p
-              initial={initialBlur}
-              whileInView={visible}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 * 1 }}
+              // initial={initialBlur}
+              // whileInView={visible}
+              // viewport={{ once: true, amount: 0.5 }}
+              // transition={{ duration: 0.5 * 1 }}
               // style={{ opacity: opacity[0], filter: blur[0] }}
               className="font-serif lg:text-2xl lg:pr-20 antialiased"
             >
@@ -305,10 +305,10 @@ function AboutSection() {
               and safe company.
             </motion.p>
             <motion.div
-              initial={initialBlur}
-              whileInView={visible}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 * 3 }}
+              // initial={initialBlur}
+              // whileInView={visible}
+              // viewport={{ once: true, amount: 0.5 }}
+              // transition={{ duration: 0.5 * 3 }}
               className="h-1/2 flex justify-center"
             >
               <Image

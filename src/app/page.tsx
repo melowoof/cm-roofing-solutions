@@ -43,7 +43,7 @@ export default function Home() {
           // fill
           alt="Barkwood shingle"
         ></Image> */}
-        <div className="w-1/2 flex flex-col items-center ">
+        <div className="">
           left side
           {/* <h1
             className={`${inter.className}  lg:text-8xl md:text-5xl text-4xl`}

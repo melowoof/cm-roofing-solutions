@@ -6,11 +6,11 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import { inter } from "./ui/fonts";
 import Image from "next/image";
-import Link from "next/link";
-import clsx from "clsx";
+// import Link from "next/link";
+// import clsx from "clsx";
 import { initialBlur, visible } from "./ui/transitions";
 import FormPage from "./ui/form";
-import { services, ServiceType } from "./services/services";
+// import { services, ServiceType } from "./services/services";
 import { scrollToId } from "./utils/util";
 
 export default function Home() {
@@ -100,7 +100,7 @@ export default function Home() {
         <SecondSection />
 
         {/* SERVICES SECTION */}
-        <ServicesSection />
+        {/* <ServicesSection /> */}
 
         {/* ABOUT SECTION */}
         <AboutSection />
@@ -195,76 +195,76 @@ function SecondSection() {
   );
 }
 
-function ServicesSection() {
-  return null;
+// function ServicesSection() {
+//   return null;
 
-  const targetRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({ target: targetRef });
-  const x = useTransform(scrollYProgress, [0.15, 0.85], ["0%", "-70%"]);
+//   const targetRef = useRef<HTMLDivElement | null>(null);
+//   const { scrollYProgress } = useScroll({ target: targetRef });
+//   const x = useTransform(scrollYProgress, [0.15, 0.85], ["0%", "-70%"]);
 
-  return (
-    <section id="services" ref={targetRef} className="relative h-[500vh]">
-      <div className="sticky top-0 h-[100vh] flex flex-col justify-center overflow-hidden ">
-        <motion.ul
-          initial={{ translateX: "-100%", opacity: 0 }}
-          whileInView={{ translateX: "0", opacity: 1 }}
-          transition={{ ease: "easeInOut", duration: 0.6 }}
-          className="flex flex-col p-4 pb-10 w-fit "
-        >
-          {services.map((service) => {
-            return (
-              <Link
-                className={clsx(
-                  `font-serif opacity-55 hover:opacity-100 transition-opacity`
-                )}
-                href={service.url}
-                key={service.id}
-              >
-                {service.title}
-              </Link>
-            );
-          })}
-        </motion.ul>
+//   return (
+//     <section id="services" ref={targetRef} className="relative h-[500vh]">
+//       <div className="sticky top-0 h-[100vh] flex flex-col justify-center overflow-hidden ">
+//         <motion.ul
+//           initial={{ translateX: "-100%", opacity: 0 }}
+//           whileInView={{ translateX: "0", opacity: 1 }}
+//           transition={{ ease: "easeInOut", duration: 0.6 }}
+//           className="flex flex-col p-4 pb-10 w-fit "
+//         >
+//           {services.map((service) => {
+//             return (
+//               <Link
+//                 className={clsx(
+//                   `font-serif opacity-55 hover:opacity-100 transition-opacity`
+//                 )}
+//                 href={service.url}
+//                 key={service.id}
+//               >
+//                 {service.title}
+//               </Link>
+//             );
+//           })}
+//         </motion.ul>
 
-        <div className="flex">
-          <motion.div
-            style={{ x }}
-            initial={initialBlur}
-            whileInView={visible}
-            transition={{ duration: 0.5 }}
-            className="flex gap-4 pl-4"
-          >
-            {services.map((service) => {
-              return <Card service={service} key={service.id} />;
-            })}
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
+//         <div className="flex">
+//           <motion.div
+//             style={{ x }}
+//             initial={initialBlur}
+//             whileInView={visible}
+//             transition={{ duration: 0.5 }}
+//             className="flex gap-4 pl-4"
+//           >
+//             {services.map((service) => {
+//               return <Card service={service} key={service.id} />;
+//             })}
+//           </motion.div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
-function Card({ service }: { service: ServiceType }) {
-  return (
-    <div className="flex w-[50vw] h-[15vw] ">
-      <Link href={service.url} className="h-full">
-        <Image
-          className="h-full object-cover hover:-translate-y-1 transition-transform w-fit"
-          src={service.imgSrc}
-          // src={"/images/services/asphalt-shingles.webp"}
-          width={500}
-          height={300}
-          alt={service.title}
-        ></Image>
-      </Link>
-      <h1
-        className={`${inter.className} ml-4 lg:text-5xl md:text-3xl text-black w-1/2 `}
-      >
-        {service.title}
-      </h1>
-    </div>
-  );
-}
+// function Card({ service }: { service: ServiceType }) {
+//   return (
+//     <div className="flex w-[50vw] h-[15vw] ">
+//       <Link href={service.url} className="h-full">
+//         <Image
+//           className="h-full object-cover hover:-translate-y-1 transition-transform w-fit"
+//           src={service.imgSrc}
+//           // src={"/images/services/asphalt-shingles.webp"}
+//           width={500}
+//           height={300}
+//           alt={service.title}
+//         ></Image>
+//       </Link>
+//       <h1
+//         className={`${inter.className} ml-4 lg:text-5xl md:text-3xl text-black w-1/2 `}
+//       >
+//         {service.title}
+//       </h1>
+//     </div>
+//   );
+// }
 
 function AboutSection() {
   return (
@@ -432,9 +432,9 @@ function AboutUsDetails() {
         <Image
           className="h-full w-full object-cover blur-sm p-16"
           src={"/images/about-us/cf-shingle_barkwood_05_1.FUMVAQ-scaled.webp"}
-          // fill
-          width={2560}
-          height={1920}
+          fill
+          // width={2560}
+          // height={1920}
           alt=""
         ></Image>
       </div>
@@ -627,7 +627,7 @@ function Footer() {
           <Logo color={"white"} />
         </div>
         <div className="w-3/6 flex flex-col">
-          {services.map((card) => {
+          {/* {services.map((card) => {
             return (
               <Link
                 className={clsx(
@@ -639,7 +639,7 @@ function Footer() {
                 {card.title}
               </Link>
             );
-          })}
+          })} */}
         </div>
         <div id="contacts" className="w-2/6 flex flex-col gap-5">
           <div className="flex flex-col gap-2">

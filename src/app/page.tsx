@@ -31,28 +31,8 @@ export default function Home() {
     ["blur(0px)", "blur(10px)"]
   );
 
-  // return (
-  //   <div className="flex w-[50vw] h-[15vw] ">
-  //     <Link href={"/"} className="h-full">
-  //       <Image
-  //         className="h-full object-cover hover:-translate-y-1 transition-transform w-fit"
-  //         src={"/images/services/asphalt-shingles.webp"}
-  //         width={500}
-  //         height={300}
-  //         alt=""
-  //       ></Image>
-  //     </Link>
-  //     <h1
-  //       className={`${inter.className} ml-4 lg:text-5xl md:text-3xl text-black w-1/2 `}
-  //     >
-  //       Asphalt Shingles
-  //     </h1>
-  //   </div>
-  // );
-
   return (
     <>
-      {/* <link rel="icon" href="/favicons/favicon.png" sizes="any" /> */}
       <section ref={targetRef} className="relative ">
         <div className="absolute z-10 w-screen h-full pointer-events-none">
           <div className="sticky top-0 flex items-end justify-end h-screen p-5">
@@ -68,7 +48,7 @@ export default function Home() {
           </div>
         </div>
 
-        <section id="home" className="block h-screen mb-40 ">
+        <section id="home" className="h-screen mb-40 ">
           <Background imgSrc={"/images/beautiful-brown-metal-roof.webp"}>
             <motion.p
               initial={initialBlur}
@@ -155,27 +135,9 @@ function SecondSection() {
 
   return (
     <section ref={targetRef} className="relative h-[200vh]">
-      {/* <div className="h-full w-full lg:px-20 pb-14 pt-6 flex items-center">
-        <div
-          // style={{ opacity: opacity[2], filter: blur[2] }}
-          // transition={{ delay: 0.25 * 5, duration: 0.8 }}
-          className="h-full"
-        >
-          <Image
-            className="h-full object-cover"
-            src={"/images/cf-shingle_barkwood.webp"}
-            width={2560}
-            height={1920}
-            // fill
-            alt="Barkwood shingle"
-          ></Image>
-          <p className="font-serif text-xl mt-1">Barkwood shingle</p>
-        </div>
-      </div> */}
-
       <div
-        className="flex lg:flex-row top-0 h-screen flex-col "
-        style={{ position: "-webkit-sticky", }}
+        className="flex lg:flex-row top-0 h-screen flex-col sticky"
+        style={{ position: "-webkit-sticky" }}
       >
         {/* Left side */}
         <div className="w-1/2 pt-14 pl-14 pr-8 flex flex-col items-center">

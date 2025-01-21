@@ -155,6 +155,24 @@ function SecondSection() {
   
     return (
       <section ref={targetRef} className=" relative h-[200vh]">
+        <div className="h-full w-full lg:px-20 pb-14 pt-6 flex items-center">
+          <div
+            // style={{ opacity: opacity[2], filter: blur[2] }}
+            // transition={{ delay: 0.25 * 5, duration: 0.8 }}
+            className="h-full"
+          >
+            <Image
+              className="h-full object-cover"
+              src={"/images/cf-shingle_barkwood.webp"}
+              width={2560}
+              height={1920}
+              // fill
+              alt="Barkwood shingle"
+            ></Image>
+            <p className="font-serif text-xl mt-1">Barkwood shingle</p>
+          </div>
+        </div>
+
         {/* Left side */}
         <div className="flex lg:flex-row sticky top-0 h-screen flex-col">
           <div className="w-1/2 pt-14 pl-14 pr-8 flex flex-col items-center">

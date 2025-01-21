@@ -139,19 +139,19 @@ export default function Home() {
 
 function SecondSection() {
   const targetRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({ target: targetRef });
-  const opacity = [
-    useTransform(scrollYProgress, [0, 0.3], [0, 1]),
-    useTransform(scrollYProgress, [0.2, 0.5], [0, 1]),
-    useTransform(scrollYProgress, [0.3, 0.6], [0, 1]),
-    useTransform(scrollYProgress, [0.4, 0.7], [0, 1]),
-  ];
-  const blur = [
-    useTransform(scrollYProgress, [0, 0.2], ["blur(10px)", "blur(0px)"]),
-    useTransform(scrollYProgress, [0.2, 0.4], ["blur(10px)", "blur(0px)"]),
-    useTransform(scrollYProgress, [0.3, 0.5], ["blur(10px)", "blur(0px)"]),
-    useTransform(scrollYProgress, [0.4, 0.6], ["blur(10px)", "blur(0px)"]),
-  ];
+  // const { scrollYProgress } = useScroll({ target: targetRef });
+  // const opacity = [
+  //   useTransform(scrollYProgress, [0, 0.3], [0, 1]),
+  //   useTransform(scrollYProgress, [0.2, 0.5], [0, 1]),
+  //   useTransform(scrollYProgress, [0.3, 0.6], [0, 1]),
+  //   useTransform(scrollYProgress, [0.4, 0.7], [0, 1]),
+  // ];
+  // const blur = [
+  //   useTransform(scrollYProgress, [0, 0.2], ["blur(10px)", "blur(0px)"]),
+  //   useTransform(scrollYProgress, [0.2, 0.4], ["blur(10px)", "blur(0px)"]),
+  //   useTransform(scrollYProgress, [0.3, 0.5], ["blur(10px)", "blur(0px)"]),
+  //   useTransform(scrollYProgress, [0.4, 0.6], ["blur(10px)", "blur(0px)"]),
+  // ];
 
   return (
     <section ref={targetRef} className=" relative h-[200vh]">
@@ -159,8 +159,8 @@ function SecondSection() {
       <div className="flex lg:flex-row sticky top-0 h-screen flex-col">
         <div className="w-1/2 pt-14 pl-14 pr-8 flex flex-col items-center">
           <motion.h1
-            style={{ opacity: opacity[0], filter: blur[0] }}
-            transition={{ delay: 0.25, duration: 0.8 }}
+            // style={{ opacity: opacity[0], filter: blur[0] }}
+            // transition={{ delay: 0.25, duration: 0.8 }}
             className={`${inter.className}  lg:text-8xl md:text-5xl text-4xl`}
           >
             ROOFING DONE
@@ -168,8 +168,8 @@ function SecondSection() {
           {/* 1st image */}
           <div className="h-full w-full lg:px-20 pb-14 pt-6 flex items-center">
             <motion.div
-              style={{ opacity: opacity[2], filter: blur[2] }}
-              transition={{ delay: 0.25 * 5, duration: 0.8 }}
+              // style={{ opacity: opacity[2], filter: blur[2] }}
+              // transition={{ delay: 0.25 * 5, duration: 0.8 }}
               className="h-full"
             >
               <Image
@@ -187,8 +187,8 @@ function SecondSection() {
         {/* Right side */}
         <div className="w-1/2 flex flex-col items-center pt-14 pr-14 pl-8">
           <motion.div
-            style={{ opacity: opacity[3], filter: blur[3] }}
-            transition={{ delay: 0.25 * 5, duration: 0.8 }}
+            // style={{ opacity: opacity[3], filter: blur[3] }}
+            // transition={{ delay: 0.25 * 5, duration: 0.8 }}
             className="flex py-10 flex-col"
           >
             <Image
@@ -203,8 +203,8 @@ function SecondSection() {
             </p>
           </motion.div>
           <motion.h1
-            style={{ opacity: opacity[1], filter: blur[1] }}
-            transition={{ delay: 0.25 * 2, duration: 0.8 }}
+            // style={{ opacity: opacity[1], filter: blur[1] }}
+            // transition={{ delay: 0.25 * 2, duration: 0.8 }}
             className={`${inter.className} lg:text-8xl md:text-5xl text-4xl`}
           >
             THE RIGHT WAY

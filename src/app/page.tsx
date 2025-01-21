@@ -174,8 +174,8 @@ function SecondSection() {
       </div> */}
 
       <div
-        className="flex lg:flex-row top-0 h-screen flex-col sticky"
-        style={{ position: "-webkit-sticky" }}
+        className="flex lg:flex-row top-0 h-screen flex-col "
+        style={{ position: "-webkit-sticky", }}
       >
         {/* Left side */}
         <div className="w-1/2 pt-14 pl-14 pr-8 flex flex-col items-center">

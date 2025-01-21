@@ -33,7 +33,10 @@ export default function Home() {
 
   return (
     <div className=" w-screen h-[200vh]">
-      <div className="top-0 sticky flex flex-row">
+      <div
+        className="top-0 sticky flex flex-row"
+        style={{ position: "sticky" }}
+      >
         {/* HIODAHDOAHWOIDHAWOHDOIAHWOIDHAOIWHDOIAHWODHAOWHDOIAHWDOIHAWOIDH
         <Image
           className="h-full object-cover"
@@ -43,7 +46,7 @@ export default function Home() {
           // fill
           alt="Barkwood shingle"
         ></Image> */}
-        <div className="z-10 relative">
+        <div className="">
           left side
           {/* <h1
             className={`${inter.className}  lg:text-8xl md:text-5xl text-4xl`}
@@ -66,7 +69,7 @@ export default function Home() {
         </div>
         {/* <div className="w-1/2 flex flex-col items-center pt-14 pr-14 pl-8">
           right side */}
-          {/* <div className="flex py-10 flex-col">
+        {/* <div className="flex py-10 flex-col">
             <Image
               className="object-cover h-full"
               src={"/images/bituminous-shingles.webp"}

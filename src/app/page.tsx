@@ -34,8 +34,8 @@ export default function Home() {
   return (
     <div className="w-screen h-[200vh] absolute" style={{position: "absolute"}}>
       <div
-        className="top-0  bg-red-200"
-        style={{ position: "sticky" }}
+        className="sticky  bg-red-200"
+        style={{ top: 0 }}
       >
         outside
         <div className="">inside normal div</div>

@@ -6,7 +6,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import { inter } from "./ui/fonts";
 import Image from "next/image";
-// import Link from "next/link";
+import Link from "next/link";
 // import clsx from "clsx";
 import { initialBlur, visible } from "./ui/transitions";
 import FormPage from "./ui/form";
@@ -28,6 +28,26 @@ export default function Home() {
     scrollYProgress,
     [0, 0.05],
     ["blur(0px)", "blur(10px)"]
+  );
+
+  return (
+    <div className="flex w-[50vw] h-[15vw] ">
+      <Link href={"/"} className="h-full">
+        <Image
+          className="h-full object-cover hover:-translate-y-1 transition-transform w-fit"
+          // src={service.imgSrc}
+          src={"/images/services/asphalt-shingles.webp"}
+          width={500}
+          height={300}
+          alt=""
+        ></Image>
+      </Link>
+      <h1
+        className={`${inter.className} ml-4 lg:text-5xl md:text-3xl text-black w-1/2 `}
+      >
+        Asphalt Shingles
+      </h1>
+    </div>
   );
 
   return (

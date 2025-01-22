@@ -31,21 +31,6 @@ export default function Home() {
     ["blur(0px)", "blur(10px)"]
   );
 
-  // return (
-  //   <div className="w-screen h-[200vh] absolute" style={{position: "absolute"}}>
-  //     <div
-  //       className="sticky  bg-red-200"
-  //       style={{ top: 0 }}
-  //     >
-  //       outside
-  //       <div className="">inside normal div</div>
-  //       <div className="w-screen h-screen static bg-green-200">
-  //         <div>inside * 2</div>inside
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
-
   return (
     <>
       <section ref={targetRef} className="relative ">
@@ -137,86 +122,22 @@ export default function Home() {
 
 function SecondSection() {
   const targetRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({ target: targetRef });
-  const opacity = [
-    useTransform(scrollYProgress, [0, 0.3], [0, 1]),
-    useTransform(scrollYProgress, [0.2, 0.5], [0, 1]),
-    useTransform(scrollYProgress, [0.3, 0.6], [0, 1]),
-    useTransform(scrollYProgress, [0.4, 0.7], [0, 1]),
-  ];
-  const blur = [
-    useTransform(scrollYProgress, [0, 0.2], ["blur(10px)", "blur(0px)"]),
-    useTransform(scrollYProgress, [0.2, 0.4], ["blur(10px)", "blur(0px)"]),
-    useTransform(scrollYProgress, [0.3, 0.5], ["blur(10px)", "blur(0px)"]),
-    useTransform(scrollYProgress, [0.4, 0.6], ["blur(10px)", "blur(0px)"]),
-  ];
-
-  // return (
-  //   <section ref={targetRef} className="relative h-[200vh]">
-  //     <div
-  //       className="flex lg:flex-row h-screen flex-col sticky"
-  //       style={{ top: 0 }}
-  //     >
-  //       {/* Left side */}
-  //       <div className="w-1/2 pt-14 pl-14 pr-8 flex flex-col items-center">
-  //         <h1
-  //           style={{ opacity: opacity[0], filter: blur[0] }}
-  //           transition={{ delay: 0.25, duration: 0.8 }}
-  //           className={`${inter.className}  lg:text-8xl md:text-5xl text-4xl`}
-  //         >
-  //           ROOFING DONE
-  //         </h1>
-  //         {/* 1st image */}
-  //         <div className="h-full w-full lg:px-20 pb-14 pt-6 flex items-center">
-  //           <div
-  //             style={{ opacity: opacity[2], filter: blur[2] }}
-  //             transition={{ delay: 0.25 * 5, duration: 0.8 }}
-  //             className="h-full"
-  //           >
-  //             <Image
-  //               className="h-full object-cover"
-  //               src={"/images/cf-shingle_barkwood.webp"}
-  //               width={2560}
-  //               height={1920}
-  //               // fill
-  //               alt="Barkwood shingle"
-  //             ></Image>
-  //             <p className="font-serif text-xl mt-1">Barkwood shingle</p>
-  //           </div>
-  //         </div>
-  //       </div>
-  //       {/* Right side */}
-  //       <div className="w-1/2 flex flex-col items-center pt-14 pr-14 pl-8">
-  //         <div
-  //           style={{ opacity: opacity[3], filter: blur[3] }}
-  //           transition={{ delay: 0.25 * 5, duration: 0.8 }}
-  //           className="flex py-10 flex-col"
-  //         >
-  //           <Image
-  //             className="object-cover h-full"
-  //             src={"/images/bituminous-shingles.webp"}
-  //             width={2000}
-  //             height={1324}
-  //             alt="Bituminous shingles"
-  //           ></Image>
-  //           <p className="font-serif text-md mt-1">
-  //             Quality roofing, covered with bituminous shingles of brown color.
-  //           </p>
-  //         </div>
-  //         <h1
-  //           style={{ opacity: opacity[1], filter: blur[1] }}
-  //           transition={{ delay: 0.25 * 2, duration: 0.8 }}
-  //           className={`${inter.className} lg:text-8xl md:text-5xl text-4xl`}
-  //         >
-  //           THE RIGHT WAY
-  //         </h1>
-  //       </div>
-  //     </div>
-  //   </section>
-  // );
+  // const { scrollYProgress } = useScroll({ target: targetRef });
+  // const opacity = [
+  //   useTransform(scrollYProgress, [0, 0.3], [0, 1]),
+  //   useTransform(scrollYProgress, [0.2, 0.5], [0, 1]),
+  //   useTransform(scrollYProgress, [0.3, 0.6], [0, 1]),
+  //   useTransform(scrollYProgress, [0.4, 0.7], [0, 1]),
+  // ];
+  // const blur = [
+  //   useTransform(scrollYProgress, [0, 0.2], ["blur(10px)", "blur(0px)"]),
+  //   useTransform(scrollYProgress, [0.2, 0.4], ["blur(10px)", "blur(0px)"]),
+  //   useTransform(scrollYProgress, [0.3, 0.5], ["blur(10px)", "blur(0px)"]),
+  //   useTransform(scrollYProgress, [0.4, 0.6], ["blur(10px)", "blur(0px)"]),
+  // ];
 
   return (
-    <section ref={targetRef} className=" relative h-[200vh]">
+    <section ref={targetRef} className=" relative h-[100vh]">
       {/* Left side */}
       <div
         className="flex lg:flex-row sticky h-screen flex-col"
@@ -224,7 +145,10 @@ function SecondSection() {
       >
         <div className="w-1/2 pt-14 pl-14 pr-8 flex flex-col items-center">
           <motion.h1
-            style={{ opacity: opacity[0], filter: blur[0] }}
+            // style={{ opacity: opacity[0], filter: blur[0] }}
+            initial={initialBlur}
+            whileInView={visible}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.25, duration: 0.8 }}
             className={`${inter.className}  lg:text-8xl md:text-5xl text-4xl`}
           >
@@ -233,7 +157,10 @@ function SecondSection() {
           {/* 1st image */}
           <div className="h-full w-full lg:px-20 pb-14 pt-6 flex items-center">
             <motion.div
-              style={{ opacity: opacity[2], filter: blur[2] }}
+              // style={{ opacity: opacity[2], filter: blur[2] }}
+              initial={initialBlur}
+              whileInView={visible}
+              viewport={{ once: true, amount: 0.5 }}
               transition={{ delay: 0.25 * 5, duration: 0.8 }}
               className="h-full"
             >
@@ -252,7 +179,10 @@ function SecondSection() {
         {/* Right side */}
         <div className="w-1/2 flex flex-col items-center pt-14 pr-14 pl-8">
           <motion.div
-            style={{ opacity: opacity[3], filter: blur[3] }}
+            // style={{ opacity: opacity[3], filter: blur[3] }}
+            initial={initialBlur}
+            whileInView={visible}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.25 * 5, duration: 0.8 }}
             className="flex py-10 flex-col"
           >
@@ -268,7 +198,10 @@ function SecondSection() {
             </p>
           </motion.div>
           <motion.h1
-            style={{ opacity: opacity[1], filter: blur[1] }}
+            // style={{ opacity: opacity[1], filter: blur[1] }}
+            initial={initialBlur}
+            whileInView={visible}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.25 * 2, duration: 0.8 }}
             className={`${inter.className} lg:text-8xl md:text-5xl text-4xl`}
           >
@@ -281,11 +214,9 @@ function SecondSection() {
 }
 
 function ServicesSection() {
-  // return null;
-
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
-  const x = useTransform(scrollYProgress, [0.15, 0.85], ["0%", "-70%"]);
+  const x = useTransform(scrollYProgress, [0.05, 0.85], ["0%", "-70%"]);
 
   return (
     <section id="services" ref={targetRef} className="relative h-[500vh]">
@@ -323,7 +254,7 @@ function ServicesSection() {
             className="flex gap-4 pl-4"
           >
             {services.map((service) => {
-              return <Card service={service} key={service.id} />;
+              return <Service service={service} key={service.id} />;
             })}
           </motion.div>
         </div>
@@ -332,24 +263,27 @@ function ServicesSection() {
   );
 }
 
-function Card({ service }: { service: ServiceType }) {
+function Service({ service }: { service: ServiceType }) {
   return (
-    <div className="flex w-[50vw] h-[15vw] ">
-      <Link href={service.url} className="h-full">
-        <Image
-          className="h-full object-cover hover:-translate-y-1 transition-transform w-fit"
-          src={service.imgSrc}
-          // src={"/images/services/asphalt-shingles.webp"}
-          width={500}
-          height={300}
-          alt={service.title}
-        ></Image>
-      </Link>
-      <h1
-        className={`${inter.className} ml-4 lg:text-5xl md:text-3xl text-black w-1/2 `}
-      >
-        {service.title}
-      </h1>
+    <div className="flex w-[50vw] h-[15vw]">
+      <div className="w-1/2">
+        <Link href={service.url} className="h-full">
+          <Image
+            className="h-full object-cover hover:-translate-y-1 transition-transform w-full"
+            src={service.imgSrc}
+            width={500}
+            height={300}
+            alt={service.title}
+          ></Image>
+        </Link>
+      </div>
+      <div className="w-1/2">
+        <h1
+          className={`${inter.className} ml-4 lg:text-5xl md:text-3xl text-black w-1/2 `}
+        >
+          {service.title}
+        </h1>
+      </div>
     </div>
   );
 }
@@ -370,7 +304,7 @@ function AboutSection() {
         </div>
       </div>
 
-      <section className="h-[150vh] w-full pt-40">
+      <section className="h-[120vh] w-full pt-40">
         <div
           className="sticky flex w-full h-screen px-10 py-10 gap-10 "
           style={{ top: 0 }}
@@ -381,11 +315,10 @@ function AboutSection() {
             className="w-1/2 h-full flex flex-col gap-4 justify-end"
           >
             <motion.p
-              // initial={initialBlur}
-              // whileInView={visible}
-              // viewport={{ once: true, amount: 0.5 }}
-              // transition={{ duration: 0.5 * 1 }}
-              // style={{ opacity: opacity[0], filter: blur[0] }}
+              initial={initialBlur}
+              whileInView={visible}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 * 1 }}
               className="font-serif lg:text-2xl lg:pr-20 antialiased"
             >
               With 30 years of combined experience in the industry, we have the
@@ -396,10 +329,10 @@ function AboutSection() {
               and safe company.
             </motion.p>
             <motion.div
-              // initial={initialBlur}
-              // whileInView={visible}
-              // viewport={{ once: true, amount: 0.5 }}
-              // transition={{ duration: 0.5 * 3 }}
+              initial={initialBlur}
+              whileInView={visible}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 * 3 }}
               className="h-1/2 flex justify-center"
             >
               <Image
@@ -446,7 +379,7 @@ function AboutSection() {
         </div>
       </section>
 
-      <section className="h-[150vh] wfull">
+      <section className="h-[120vh] w-full">
         <div
           className="sticky flex w-full h-screen px-10 py-10 gap-20"
           style={{ top: 0 }}
@@ -527,20 +460,28 @@ function AboutUsDetails() {
           className="h-full w-full object-cover blur-sm p-16"
           src={"/images/about-us/cf-shingle_barkwood_05_1.FUMVAQ-scaled.webp"}
           fill
-          // width={2560}
-          // height={1920}
           alt=""
         ></Image>
       </div>
-      <div className="grid grid-cols-3 justify-center h-full w-full items-center gap-16 text-white p-40">
-        <div className="flex flex-col gap-4 h-1/3">
+      <div className="flex justify-center h-full w-full items-center xl:gap-16 gap-10 text-white lg:px-40 md:px-24 ">
+        <div className="flex flex-col gap-4 h-1/3 basis-1 grow jusbe">
           <h1 className={`${inter.className} lg:text-4xl `}>Owner Operated</h1>
           <p className="font-serif lg:text-xl">
             From start to finish, we are involved with every step of the
             process. We maintain contact until every last detail is finished.
           </p>
         </div>
-        <div className="flex items-center flex-col gap-4  h-1/3">
+        <div className="flex flex-col gap-4 h-1/3 basis-1 grow">
+          <h1 className={`${inter.className} lg:text-4xl`}>
+            Satisfaction Guaranteed
+          </h1>
+          <p className="font-serif lg:text-xl">
+            With our commitment to excellence, we&apos;re confident that we can
+            make a noticeable and affordable difference on your next roofing
+            project.
+          </p>
+        </div>
+        <div className="flex flex-col gap-4 basis-1  h-1/3 grow">
           <h1 className={`${inter.className} lg:text-4xl`}>
             30 Years of Experience
           </h1>
@@ -549,16 +490,6 @@ function AboutUsDetails() {
             take great pride in delivering high-quality services while
             maintaining efficient project timelines and proven industry
             experience.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4  h-1/3 ">
-          <h1 className={`${inter.className} lg:text-4xl`}>
-            Satisfaction Guaranteed
-          </h1>
-          <p className="font-serif lg:text-xl">
-            With our commitment to excellence, we&apos;re confident that we can
-            make a noticeable and affordable difference on your next roofing
-            project.
           </p>
         </div>
       </div>
@@ -721,7 +652,7 @@ function Footer() {
           <Logo color={"white"} />
         </div>
         <div className="w-3/6 flex flex-col">
-          {/* {services.map((card) => {
+          {services.map((card) => {
             return (
               <Link
                 className={clsx(
@@ -733,7 +664,7 @@ function Footer() {
                 {card.title}
               </Link>
             );
-          })} */}
+          })}
         </div>
         <div id="contacts" className="w-2/6 flex flex-col gap-5">
           <div className="flex flex-col gap-2">
